@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Thinker from "@/components/Thinker";
+import localFont from 'next/font/local'
+
+const font = localFont({ src: '../../public/font/Cubic_11_1.300_R.ttf' })
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +20,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <div className="fixed top-0 left-0 w-full h-full bg-[url('/noise.svg')] z-50 opacity-10 pointer-events-none" ></div>
+        <main className={`flex min-h-screen flex-row items-center justify-between border-2 border-gray-300 relative ${font.className}`}>
+          <div className="flex-1 flex items-center justify-center min-h-screen relative">
+            <div className="border-8 border-gray-300 w-1/4 h-1/2 flex items-center justify-center absolute top-1/2 left-1/4 transform -translate-x-1/2 -translate-y-1/2 -z-20"></div>
+          </div>
+          <div className="absolute top-0 right-0 w-1/2 h-full">
+            {children}
+          </div>
+          <Thinker />
+        </main>
+      </body>
     </html>
   );
 }
