@@ -19,6 +19,6 @@ const NAV_TABS = [
     name: 'CONTACT ME',
     path: 'contact',
   },
-];
+]
 
-export { NAV_TABS };
+export { NAV_TABS }

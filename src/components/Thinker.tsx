@@ -1,9 +1,9 @@
-'use client';
+'use client'
 
-import { Environment, PerspectiveCamera, useGLTF } from '@react-three/drei';
-import { Canvas } from '@react-three/fiber';
+import { Environment, PerspectiveCamera, useGLTF } from '@react-three/drei'
+import { Canvas } from '@react-three/fiber'
 
-import ThinkerModel from '@/app/model/Thinker';
+import ThinkerModel from '@/app/model/Thinker'
 
 export default function Thinker() {
   return (
@@ -14,7 +14,7 @@ export default function Thinker() {
         <ThinkerModel />
       </Canvas>
     </div>
-  );
+  )
 }
 
-useGLTF.preload('/glb/thinker.glb');
+useGLTF.preload('/glb/thinker.glb')
