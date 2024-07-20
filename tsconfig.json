@@ -32,6 +32,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "src/types/*.d.ts",
+    "next.config.mjs",
     "client/gtools/dist/types/**/*.ts"
   ],
   "exclude": ["node_modules"]
