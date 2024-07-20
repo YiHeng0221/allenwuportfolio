@@ -1,7 +1,7 @@
 {
   "extends": ["next/core-web-vitals", "plugin:prettier/recommended"],
   "parserOptions": {
-    "project": "./tsconfig.json" // 添加這一行
+    "project": "./tsconfig.json"
   },
   "rules": {
     "jsx-a11y/anchor-is-valid": [
