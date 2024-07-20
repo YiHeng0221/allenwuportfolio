@@ -11,7 +11,7 @@ export default function ThinkerModel() {
   scene.rotation.y = Math.PI / 2
   
   useFrame(() => {
-    if (ref.current && ref.current instanceof Object) {
+    if (ref.current && typeof ref.current === 'object') {
       (ref.current as THREE.Object3D).rotation.y += 0.001;
     }
   });
