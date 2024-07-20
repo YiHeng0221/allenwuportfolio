@@ -2,8 +2,17 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 
-const Navbar = ({ tab }) => {
-  const [hoverIndex, setHoverIndex] = useState(null)
+interface Tab {
+  name: string;
+  path: string;
+}
+
+interface NavbarProps {
+  tab: Tab[];
+}
+
+const Navbar: React.FC<NavbarProps> = ({ tab }) => {
+  const [hoverIndex, setHoverIndex] = useState<number | null>(null)
 
   return (
     <>
