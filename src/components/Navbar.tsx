@@ -44,7 +44,7 @@ Navbar.propTypes = {
     PropTypes.shape({
       name: PropTypes.string.isRequired,
       path: PropTypes.string.isRequired,
-    })
+    }).isRequired
   ).isRequired,
 }
 
