@@ -3,12 +3,12 @@ import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 
 interface Tab {
-  name: string;
-  path: string;
+  name: string
+  path: string
 }
 
 interface NavbarProps {
-  tab: Tab[];
+  tab: Tab[]
 }
 
 const Navbar: React.FC<NavbarProps> = ({ tab }) => {
@@ -16,22 +16,25 @@ const Navbar: React.FC<NavbarProps> = ({ tab }) => {
 
   return (
     <>
-      {tab && tab.map((item, index) => (
-        <div
-          key={index}
-          className='relative w-full text-5xl h-24 hover:cursor-pointer font-extrabold hover:text-[#1b1b1b] overflow-hidden mb-8 py-6 px-20'
-          onMouseEnter={() => setHoverIndex(index)}
-          onMouseLeave={() => setHoverIndex(null)}
-        >
+      {tab &&
+        tab.map((item, index) => (
           <div
-            className={`w-full h-24 absolute right-0 top-0 transition-all duration-100 flex ${hoverIndex === index ? '' : 'invisible translate-x-full'}`}  
+            key={index}
+            className="relative mb-8 h-24 w-full overflow-hidden px-20 py-6 text-5xl font-extrabold hover:cursor-pointer hover:text-[#1b1b1b]"
+            onMouseEnter={() => setHoverIndex(index)}
+            onMouseLeave={() => setHoverIndex(null)}
           >
-            <div className="w-0 h-0 border-t-[1rem] border-t-transparent border-r-[6rem] border-b-[5rem] border-b-transparent border-gray-300 rotate-90"></div>
-            <div className='bg-gray-300 -translate-x-4 w-[calc(100%+1rem)] '></div>
+            <div
+              className={`absolute right-0 top-0 flex h-24 w-full transition-all duration-100 ${hoverIndex === index ? '' : 'invisible translate-x-full'}`}
+            >
+              <div className="h-0 w-0 rotate-90 border-b-[5rem] border-r-[6rem] border-t-[1rem] border-gray-300 border-b-transparent border-t-transparent"></div>
+              <div className="w-[calc(100%+1rem)] -translate-x-4 bg-gray-300"></div>
+            </div>
+            <a className="absolute" href={item.path}>
+              {item.name}
+            </a>
           </div>
-          <a className='absolute' href={item.path}>{item.name}</a>
-        </div>
-      ))}
+        ))}
     </>
   )
 }

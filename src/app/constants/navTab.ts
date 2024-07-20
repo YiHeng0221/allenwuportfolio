@@ -1,24 +1,24 @@
 const NAV_TABS = [
   {
     name: 'ABOUT ME',
-    path: 'about'
+    path: 'about',
   },
   {
     name: 'SKILL',
-    path: 'skill'
+    path: 'skill',
   },
   {
     name: 'EXPERIENCE',
-    path: 'experience'
+    path: 'experience',
   },
   {
     name: 'PROJECTS',
-    path: 'projects'
+    path: 'projects',
   },
   {
     name: 'CONTACT ME',
-    path: 'contact'
-  }
+    path: 'contact',
+  },
 ]
 
-export { NAV_TABS}
+export { NAV_TABS }

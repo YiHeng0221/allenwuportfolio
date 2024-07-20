@@ -1,16 +1,12 @@
-"use client";
+'use client'
 
-import Image from "next/image";
-import { useGLTF, ContactShadows, Environment, OrbitControls, PerspectiveCamera } from '@react-three/drei'
-import { useFrame, Canvas} from '@react-three/fiber';
-import { useRef } from 'react';
-import ThinkerModel from '@/app/model/Thinker';
+import { useGLTF, Environment, PerspectiveCamera } from '@react-three/drei'
+import { Canvas } from '@react-three/fiber'
+import ThinkerModel from '@/app/model/Thinker'
 
 export default function Thinker() {
-  
-
-  return (    
-    <div className="flex items-center justify-center h-full w-full bg-transparent absolute top-0 left-0 -z-10">
+  return (
+    <div className="absolute left-0 top-0 -z-10 flex h-full w-full items-center justify-center bg-transparent">
       <Canvas>
         <Environment preset="studio" />
         <PerspectiveCamera makeDefault position={[1.4, 0.8, 3.8]} />
@@ -20,4 +16,4 @@ export default function Thinker() {
   )
 }
 
-useGLTF.preload("/glb/thinker.glb");
+useGLTF.preload('/glb/thinker.glb')
