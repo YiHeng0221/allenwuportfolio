@@ -30,7 +30,16 @@ export default function RootLayout({
           <div className="relative flex min-h-screen flex-1 items-center justify-center">
             <div className="absolute left-1/4 top-1/2 -z-20 flex h-1/2 w-1/4 -translate-x-1/2 -translate-y-1/2 transform items-center justify-center border-8 border-gray-300"></div>
           </div>
-          <div className="absolute right-0 top-0 h-full w-1/2">{children}</div>
+          <div className="absolute right-0 top-0 h-full w-1/2">
+            <div className="absolute right-0 top-0 h-[calc(100%-4rem)] w-full">
+              {children}
+            </div>
+            <footer className="absolute bottom-0 right-0 h-16 w-full">
+              <a className="text-2xl hover:bg-light hover:text-dark" href="/">
+                cd~
+              </a>
+            </footer>
+          </div>
           <Thinker />
         </main>
       </body>

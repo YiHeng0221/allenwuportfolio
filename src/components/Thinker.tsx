@@ -3,7 +3,7 @@
 import { Environment, PerspectiveCamera, useGLTF } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
 
-import ThinkerModel from '@/app/model/Thinker'
+import ThinkerModel from '@/model/Thinker'
 
 export default function Thinker() {
   return (
