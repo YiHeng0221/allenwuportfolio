@@ -18,6 +18,10 @@ const config: Config = {
         dark: '#1b1b1b',
         light: '#f9f9f9',
       },
+      gridTemplateColumns: {
+        // Simple 16 column grid
+        full: 'repeat(100, minmax(0, 1fr))',
+      },
       keyframes: {
         'charging-1': {
           '10%, 100%': { opacity: '1' },
@@ -58,6 +62,10 @@ const config: Config = {
           '0%,99%': { opacity: '0' },
           '99%, 100%': { opacity: '1' },
         },
+        spin: {
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(360deg)' },
+        },
       },
     },
     animation: {
@@ -71,6 +79,7 @@ const config: Config = {
       'charging-8': 'charging-8 5s step-end',
       'charging-9': 'charging-9 5s step-end',
       'charging-10': 'charging-10 5s step-end',
+      spin: 'spin 1s linear infinite',
     },
   },
   plugins: [],

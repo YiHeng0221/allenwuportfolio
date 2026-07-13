@@ -2,7 +2,7 @@ export type SkillItem = {
   name: string
   percentage: number
   icon: string
-  type: 'frontend' | 'backend' | 'test' | 'cicd' | 'design'
+  type: 'frontend' | 'backend' | 'test' | 'cicd' | 'design' | 'tooling'
 }
 
 export const skillTypes = {
@@ -11,6 +11,7 @@ export const skillTypes = {
   test: 'TEST',
   backend: 'BACKEND',
   cicd: 'CICD & VERSION CONTROL',
+  tooling: 'TOOLING & ANALYTICS',
 }
 
 export const skills: SkillItem[] = [
@@ -139,6 +140,54 @@ export const skills: SkillItem[] = [
     percentage: 70,
     icon: '/logo/python.png',
     type: 'backend',
+  },
+  {
+    name: 'JavaScript (ES6+)',
+    percentage: 90,
+    icon: '/logo/js.png',
+    type: 'frontend',
+  },
+  {
+    name: 'StyleX',
+    percentage: 60,
+    icon: '/logo/stylex.png',
+    type: 'frontend',
+  },
+  {
+    name: 'Supabase',
+    percentage: 75,
+    icon: '/logo/supabase.png',
+    type: 'backend',
+  },
+  {
+    name: 'AWS EC2',
+    percentage: 60,
+    icon: '/logo/aws.png',
+    type: 'cicd',
+  },
+  {
+    name: 'Railway',
+    percentage: 60,
+    icon: '/logo/railway.png',
+    type: 'cicd',
+  },
+  {
+    name: 'GitLab',
+    percentage: 80,
+    icon: '/logo/gitlab.png',
+    type: 'cicd',
+  },
+  {
+    name: 'GA4',
+    percentage: 70,
+    icon: '/logo/ga4.png',
+    type: 'tooling',
+  },
+  {
+    name: 'GTM',
+    percentage: 60,
+    icon: '/logo/gtm.png',
+    type: 'tooling',
   },
   {
     name: 'React',
