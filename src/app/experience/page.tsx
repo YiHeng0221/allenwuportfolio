@@ -47,8 +47,8 @@ const experiences = [
 
 export default function Experience() {
   return (
-    <div className="flex h-full w-full flex-col items-center justify-center px-10">
-      <h1 className="mb-6 text-6xl font-bold">EXPERIENCE</h1>
+    <div className="flex h-full w-full flex-col items-center justify-center px-5 lg:px-10">
+      <h1 className="mb-6 text-4xl font-bold lg:text-6xl">EXPERIENCE</h1>
       <div className="terminal-scroll flex w-full flex-col gap-2 overflow-auto py-4">
         <pre className="text-xs text-gray-400">{'> cat ~/experience.log'}</pre>
         <pre className="mb-2 text-xs text-gray-400">

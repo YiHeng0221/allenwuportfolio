@@ -28,7 +28,7 @@ const Navbar: React.FC<NavbarProps> = ({ tab }) => {
         tab.map((item, index) => (
           <div
             key={index}
-            className="relative mb-8 h-24 w-full overflow-hidden px-20 py-6 text-5xl font-extrabold hover:cursor-pointer hover:text-[#1b1b1b]"
+            className="relative mb-4 h-16 w-full overflow-hidden px-6 py-4 text-3xl font-extrabold hover:cursor-pointer hover:text-[#1b1b1b] lg:mb-8 lg:h-24 lg:px-20 lg:py-6 lg:text-5xl"
             onMouseEnter={() => {
               setHoverIndex(index)
               setSelectedSection(item.path)

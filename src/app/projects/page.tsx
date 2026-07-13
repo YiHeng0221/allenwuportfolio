@@ -36,8 +36,8 @@ const statusColor = (status: string) => {
 
 export default function Projects() {
   return (
-    <div className="flex h-full w-full flex-col items-center justify-center px-10">
-      <h1 className="mb-6 text-6xl font-bold">PROJECTS</h1>
+    <div className="flex h-full w-full flex-col items-center justify-center px-5 lg:px-10">
+      <h1 className="mb-6 text-4xl font-bold lg:text-6xl">PROJECTS</h1>
       <div className="terminal-scroll flex w-full flex-col gap-4 overflow-auto py-4">
         <pre className="text-xs text-gray-400">{'> ls ~/projects/'}</pre>
         {projects.map((project, index) => {

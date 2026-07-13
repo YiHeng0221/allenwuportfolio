@@ -8,9 +8,9 @@ export default function About() {
   const description =
     'Expert in building scalable e-commerce and AI-driven product systems. Led end-to-end delivery of complex features, driving frontend architecture, API design collaboration, testing strategy, and engineering efficiency. Brings a strong blend of engineering execution, product thinking, and UI/UX awareness to align engineering, product, and design toward high-impact outcomes.'
   return (
-    <div className="flex h-full w-full flex-col items-center justify-center px-10">
-      <h1 className="mb-6 text-6xl font-bold">ABOUT ME</h1>
-      <div className="flex w-full flex-col items-center justify-center border-2 border-gray-300 p-6">
+    <div className="flex h-full w-full flex-col items-center justify-center px-5 lg:px-10">
+      <h1 className="mb-6 text-4xl font-bold lg:text-6xl">ABOUT ME</h1>
+      <div className="flex w-full flex-col items-center justify-center border-2 border-gray-300 p-4 lg:p-6">
         <pre className="mb-4 text-xs leading-tight text-gray-400">
           {`
     ╔══════════════════════════════╗
@@ -18,8 +18,8 @@ export default function About() {
     ╚══════════════════════════════╝
           `}
         </pre>
-        <div className="text-2xl">
-          <div className="flex gap-6">
+        <div className="w-full text-2xl">
+          <div className="flex flex-col items-center gap-4 lg:flex-row lg:items-start lg:gap-6">
             <Image
               className="border-2 border-gray-300"
               src="/pictures/selfie.png"
