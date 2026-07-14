@@ -50,8 +50,7 @@ export default function CameraController({
     // model off the narrow portrait viewport. Pan the camera left so the model
     // centers. Zoom distance and the section lerp are untouched — the zoom
     // behavior stays identical to desktop.
-    const isMobile =
-      typeof window !== 'undefined' && window.innerWidth < 1024
+    const isMobile = typeof window !== 'undefined' && window.innerWidth < 1024
     const xShift = isMobile ? -1.4 : 0
 
     const targetPos = config.position.clone()
