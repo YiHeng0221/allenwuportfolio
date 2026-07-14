@@ -36,10 +36,9 @@ export default function RootLayout({
               <div className="relative hidden min-h-screen flex-1 items-center justify-center lg:flex">
                 <div className="pointer-events-none absolute left-1/4 top-1/2 z-10 h-1/2 w-1/4 -translate-x-1/2 -translate-y-1/2 transform border-8 border-gray-300"></div>
               </div>
-              {/* 3D Thinker is desktop-only — hidden on mobile for readability + performance */}
-              <div className="hidden lg:block">
-                <Thinker />
-              </div>
+              {/* 3D Thinker: faint background on mobile, full on desktop.
+                  Same camera/zoom logic on all sizes (shared CameraController). */}
+              <Thinker />
               <div className="absolute right-0 top-0 h-full w-full lg:w-1/2">
                 <div className="absolute right-0 top-0 h-[calc(100%-4rem)] w-full">
                   {children}

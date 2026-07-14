@@ -45,8 +45,22 @@ export default function CameraController({
     const config =
       CAMERA_CONFIGS[selectedSection || 'default'] || CAMERA_CONFIGS.default
 
-    camera.position.lerp(config.position, 0.03)
-    lookAtTarget.current.lerp(config.lookAt, 0.03)
+    // On mobile (< lg) the desktop's horizontal offset (lookAt.x ≈ 1.4, which
+    // parks the model on the left while content sits on the right) pushes the
+    // model off the narrow portrait viewport. Pan the camera left so the model
+    // centers. Zoom distance and the section lerp are untouched — the zoom
+    // behavior stays identical to desktop.
+    const isMobile =
+      typeof window !== 'undefined' && window.innerWidth < 1024
+    const xShift = isMobile ? -1.4 : 0
+
+    const targetPos = config.position.clone()
+    const targetLook = config.lookAt.clone()
+    targetPos.x += xShift
+    targetLook.x += xShift
+
+    camera.position.lerp(targetPos, 0.03)
+    lookAtTarget.current.lerp(targetLook, 0.03)
     camera.lookAt(lookAtTarget.current)
   })
 

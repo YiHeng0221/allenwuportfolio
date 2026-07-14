@@ -11,7 +11,7 @@ export default function Thinker() {
   const { selectedSection } = useCameraContext()
 
   return (
-    <div className="absolute left-0 top-0 -z-10 flex h-full w-full items-center justify-center bg-transparent">
+    <div className="absolute left-0 top-0 -z-10 flex h-full w-full items-center justify-center bg-transparent opacity-[0.18] lg:opacity-100">
       <Canvas>
         <ambientLight intensity={0.5} />
         <directionalLight position={[5, 5, 5]} intensity={1} />

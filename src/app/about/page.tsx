@@ -8,8 +8,8 @@ export default function About() {
   const description =
     'Expert in building scalable e-commerce and AI-driven product systems. Led end-to-end delivery of complex features, driving frontend architecture, API design collaboration, testing strategy, and engineering efficiency. Brings a strong blend of engineering execution, product thinking, and UI/UX awareness to align engineering, product, and design toward high-impact outcomes.'
   return (
-    <div className="flex h-full w-full flex-col items-center justify-center px-5 lg:px-10">
-      <h1 className="mb-6 text-4xl font-bold lg:text-6xl">ABOUT ME</h1>
+    <div className="terminal-scroll flex h-full w-full flex-col items-center justify-start overflow-y-auto px-5 py-4 lg:justify-center lg:overflow-hidden lg:px-10 lg:py-0">
+      <h1 className="mb-6 shrink-0 text-4xl font-bold lg:text-6xl">ABOUT ME</h1>
       <div className="flex w-full flex-col items-center justify-center border-2 border-gray-300 p-4 lg:p-6">
         <pre className="mb-4 text-xs leading-tight text-gray-400">
           {`
